@@ -76,6 +76,7 @@
             cursor: pointer;
             transition: all 0.2s ease;
             outline: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .option-btn:hover {
@@ -161,75 +162,75 @@
     <div class="question-box active" id="q0">
         <p class="question-text">1. Hva slags logistikkvirksomhet er de spesielt gode på?</p>
         <div class="options-list">
-            <button class="option-btn" onclick="sjekkSvar(this, 0, 'A')">A) 3PL</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 0, 'B')">B) Kontainerfrakt til sjøs</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 0, 'C')">C) Ekspressbudbiler</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 0, 'D')">D) Flyfrakt</button>
+            <button class="option-btn" data-sporsmal="0" data-bokstav="A">A) 3PL</button>
+            <button class="option-btn" data-sporsmal="0" data-bokstav="B">B) Kontainerfrakt til sjøs</button>
+            <button class="option-btn" data-sporsmal="0" data-bokstav="C">C) Ekspressbudbiler</button>
+            <button class="option-btn" data-sporsmal="0" data-bokstav="D">D) Flyfrakt</button>
         </div>
         <div class="explanation" id="exp0">
-            <strong>Forklaring:</strong> Kanmer Logistikk har spesialisert seg på tredjepartslogistikk (3PL). Deres systemer sikrer en sømløs overgang fra ordremottak i nettbutikken til varene er pakket og sendt. Ved å outsource til en expert på 3PL, slipper bedrifter å bekymre seg for lagerplass og bemanning.
+            <strong>Forklaring:</strong> Kanmer Logistikk har spesialisert seg på tredjepartslogistikk (3PL). Deres systemer sikrer en sømløs overgang fra ordremottak i nettbutikken til varene er pakket og sendt. Ved å outsource til en ekspert på 3PL, slipper bedrifter å bekymre seg for lagerplass og bemanning.
         </div>
-        <button class="next-btn" id="next0" onclick="nesteSporsmal(0)">Neste spørsmål</button>
+        <button class="next-btn" id="next0" data-neste="0">Neste spørsmål</button>
     </div>
 
     <!-- Spørsmål 2 -->
     <div class="question-box" id="q1">
         <p class="question-text">2. Hvilke to ISO-standarder har de nylig blitt sertifisert etter?</p>
         <div class="options-list">
-            <button class="option-btn" onclick="sjekkSvar(this, 1, 'B')">A) ISO 27001 og ISO 45001</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 1, 'B')">B) ISO 9001 og ISO 14001</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 1, 'C')">C) ISO 22000 og ISO 50001</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 1, 'D')">D) ISO 13485 og ISO 9001</button>
+            <button class="option-btn" data-sporsmal="1" data-bokstav="A">A) ISO 27001 og ISO 45001</button>
+            <button class="option-btn" data-sporsmal="1" data-bokstav="B">B) ISO 9001 og ISO 14001</button>
+            <button class="option-btn" data-sporsmal="1" data-bokstav="C">C) ISO 22000 og ISO 50001</button>
+            <button class="option-btn" data-sporsmal="1" data-bokstav="D">D) ISO 13485 og ISO 9001</button>
         </div>
         <div class="explanation" id="exp1">
             <strong>Forklaring:</strong> Sertifiseringen etter ISO 9001 (Kvalitetsledelse) og ISO 14001 (Miljøledelse) viser at bedriften opprettholder strenge standarder for kvalitet og bærekraft. Dette gjelder i alle ledd fra første ordremottak til sluttutlevering, noe som gir kundene trygghet for effektive og grønne prosesser.
         </div>
-        <button class="next-btn" id="next1" onclick="nesteSporsmal(1)">Neste spørsmål</button>
+        <button class="next-btn" id="next1" data-neste="1">Neste spørsmål</button>
     </div>
 
     <!-- Spørsmål 3 -->
     <div class="question-box" id="q2">
         <p class="question-text">3. Hvilken kombinasjon beskriver sentrale oppgaver?</p>
         <div class="options-list">
-            <button class="option-btn" onclick="sjekkSvar(this, 2, 'A')">A) Produktutvikling, markedsføring og salg</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 2, 'B')">B) Fakturering, regnskapsførsel og revisjon</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 2, 'C')">C) Plukking, pakking og varemottak</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 2, 'D')">D) Transportanalyse, tollbehandling og ruteplanlegging</button>
+            <button class="option-btn" data-sporsmal="2" data-bokstav="A">A) Produktutvikling, markedsføring og salg</button>
+            <button class="option-btn" data-sporsmal="2" data-bokstav="B">B) Fakturering, regnskapsførsel og revisjon</button>
+            <button class="option-btn" data-sporsmal="2" data-bokstav="C">C) Plukking, pakking og varemottak</button>
+            <button class="option-btn" data-sporsmal="2" data-bokstav="D">D) Transportanalyse, tollbehandling og ruteplanlegging</button>
         </div>
         <div class="explanation" id="exp2">
             <strong>Forklaring:</strong> Kjernevirksomheten omfatter den fysiske flyten av varer: varemottak, lagring, samt nøyaktig plukking og pakking av varer. Disse operasjonene kobles tett sammen med digitalt ordremottak, slik at ordrer behandles umiddelbart og feilfritt.
         </div>
-        <button class="next-btn" id="next2" onclick="nesteSporsmal(2)">Neste spørsmål</button>
+        <button class="next-btn" id="next2" data-neste="2">Neste spørsmål</button>
     </div>
 
     <!-- Spørsmål 4 -->
     <div class="question-box" id="q3">
         <p class="question-text">4. Hvor mange behandlede ordre har de hatt hittil i år med 99,6 % nøyaktighet?</p>
         <div class="options-list">
-            <button class="option-btn" onclick="sjekkSvar(this, 3, 'A')">A) 4 954 ordre</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 3, 'B')">B) 1 250 ordre</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 3, 'C')">C) 12 400 ordre</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 3, 'D')">D) 8 750 ordre</button>
+            <button class="option-btn" data-sporsmal="3" data-bokstav="A">A) 4 954 ordre</button>
+            <button class="option-btn" data-sporsmal="3" data-bokstav="B">B) 1 250 ordre</button>
+            <button class="option-btn" data-sporsmal="3" data-bokstav="C">C) 12 400 ordre</button>
+            <button class="option-btn" data-sporsmal="3" data-bokstav="D">D) 8 750 ordre</button>
         </div>
         <div class="explanation" id="exp3">
             <strong>Forklaring:</strong> Med hele 4 954 ordre behandlet hittil i år og en nøyaktighet på 99,6 %, viser de en formidabel presisjon. Helt fra automatisert ordremottak til varene forlater rampen, sørger de tette rutinene for at avvik nesten ikke forekommer.
         </div>
-        <button class="next-btn" id="next3" onclick="nesteSporsmal(3)">Neste spørsmål</button>
+        <button class="next-btn" id="next3" data-neste="3">Neste spørsmål</button>
     </div>
 
     <!-- Spørsmål 5 -->
     <div class="question-box" id="q4">
         <p class="question-text">5. Hva er hovedformålet med 3PL-tjenester?</p>
         <div class="options-list">
-            <button class="option-btn" onclick="sjekkSvar(this, 4, 'A')">A) Å produsere emballasjemateriell for videresalg</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 4, 'B')">B) Å håndtere kunders lager- og logistikkoppgaver</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 4, 'C')">C) Å tilby ren konsulentbistand innen HR-tjenester</button>
-            <button class="option-btn" onclick="sjekkSvar(this, 4, 'D')">D) Å drifte IT-infrastruktur og serverparker</button>
+            <button class="option-btn" data-sporsmal="4" data-bokstav="A">A) Å produsere emballasjemateriell for videresalg</button>
+            <button class="option-btn" data-sporsmal="4" data-bokstav="B">B) Å håndtere kunders lager- og logistikkoppgaver</button>
+            <button class="option-btn" data-sporsmal="4" data-bokstav="C">C) Å tilby ren konsulentbistand innen HR-tjenester</button>
+            <button class="option-btn" data-sporsmal="4" data-bokstav="D">D) Å drifte IT-infrastruktur og serverparker</button>
         </div>
         <div class="explanation" id="exp4">
             <strong>Forklaring:</strong> Hovedformålet med 3PL er å overta og profesjonalisere hele eller deler av en kundes lager- og logistikkoppgaver. Dette inkluderer alt fra integrert ordremottak og lagerstyring til pakking og distribusjon, slik at kunden kan fokusere på kjernevirksomheten sin.
         </div>
-        <button class="next-btn" id="next4" onclick="visResultat()">Se resultat</button>
+        <button class="next-btn" id="next4" data-resultat="true">Se resultat</button>
     </div>
 
     <!-- Resultatskjerm -->
@@ -238,4 +239,3 @@
         <div class="score-display" id="scoreText">0 av 5 riktige</div>
         <p>Takk for at du tok deg tid til quizen!</p>
         <div class="wheel-promo">
-            <strong>🎁 Premie sjanse!</strong><br>
